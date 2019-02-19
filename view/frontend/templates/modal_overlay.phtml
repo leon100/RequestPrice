@@ -1,0 +1,60 @@
+<div id="modal-overlay" style="display:none;">
+    <form class="form-horizontal leon-request-form" action="/leon_requestprice/index/saverequest/" method="post" data-hasrequired="* Required Fields" >
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Request Price</legend>
+            <input name="sku" type="hidden" value="<?php echo $block->getSKU(); ?>">
+            <input name="form_key" type="hidden" value="<?php echo $block->getFormKey() ?>" />
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="customer_name">Name</label>
+                <div class="col-md-4">
+                    <input id="customer_name" name="customer_name" type="text" placeholder="John" class="form-control input-md" required="" data-validate="{required:true}">
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="customer_email">Email</label>
+                <div class="col-md-4">
+                    <input id="customer_email" name="customer_email" type="text" placeholder="john@email.com" class="form-control input-md" required="" data-validate="{required:true, 'validate-email':true}">
+
+                </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="customer_comment">Comment</label>
+                <div class="col-md-4">
+                    <textarea class="form-control" id="customer_comment" name="customer_comment"></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="leon_send"></label>
+                <div class="col-md-4">
+                    <button id="leon_send" name="leon_send" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "modal_overlay": {
+                        "component": "Leon_RequestPrice/js/modal_overlay"
+                    }
+                 }
+            }
+        }
+    }
+</script>

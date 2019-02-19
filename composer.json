@@ -1,0 +1,22 @@
+{
+    "name": "leon/module-requestprice",
+    "description": "",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Igor",
+            "email": "thenif68@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Leon\\RequestPrice\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
